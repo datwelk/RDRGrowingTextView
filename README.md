@@ -5,6 +5,7 @@ Use in any Auto Layout constrained view hierarchy. Add a less-than-or-equal heig
 
 # Example
 See the sample project for more details.
+
 ![Demo](Demo.gif)
 
 # License

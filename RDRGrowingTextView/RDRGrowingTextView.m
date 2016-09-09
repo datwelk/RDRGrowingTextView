@@ -65,7 +65,14 @@
 - (void)updateLayout
 {
     [self invalidateIntrinsicContentSize];
-    [self scrollRangeToVisible:self.selectedRange];
+    [self layoutIfNeeded];
+}
+
+- (void)scrollRectToVisible:(CGRect)rect animated:(BOOL)animated
+{
+    // Update frame right before scroll occurs
+    [self updateLayout];
+    [super scrollRectToVisible:rect animated:animated];
 }
 
 @end
